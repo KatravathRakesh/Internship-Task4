@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="task4.css">
+  </head>
+  <body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#todo">To-Do List</a>
+            <a href="#product-listing">Product Listing</a>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hi! I'm a web developer passionate about creating amazing websites.</p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <ul>
+            <li>To-Do List App</li>
+            <li>Product Listing Page</li>
+            <li>Portfolio Website</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+    </section>
+
+    <section id="todo" class="container">
+        <h2>To-Do List</h2>
+        <input id="taskInput" placeholder="Add task">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <section id="product-listing" class="container">
+        <h2>Product Listing</h2>
+        <label>Filter by Category:</label>
+        <select id="filterCategory" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+        </select>
+        
+        <label>Sort by Price:</label>
+        <button onclick="sortProducts('asc')">Low to High</button>
+        <button onclick="sortProducts('desc')">High to Low</button>
+        
+        <label>Sort by Rating:</label>
+        <button onclick="sortByRating()">Sort by Rating</button>
+
+        <div id="productList"></div>
+    </section>
+
+  </body>
+  <script src="task4.js"></script>
+</html>
